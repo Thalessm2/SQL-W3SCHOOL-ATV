@@ -1,0 +1,503 @@
+#### Exercício 1
+SELECT Quantity AS ' Quantidade',
+		ProductID AS 'Id do Produto',
+        OrderDetailID AS 'Detalhe do pedido',
+        OrderID AS 'Id do pedido'
+FROM OrderDetails
+WHERE Quantity > 15
+AND ProductID >10
+Order BY OrderDetailID
+
+#### Exercício 2
+SELECT Quantity AS ' Quantidade',
+		ProductID AS 'Id do Produto',
+        OrderDetailID AS 'Detalhe do pedido',
+        OrderID AS 'Id do pedido'
+FROM OrderDetails
+WHERE Quantity > 20
+AND OrderID <100
+Order BY ProductID
+
+#### Exercício 3
+SELECT Quantity AS ' Quantidade',
+		ProductID AS 'Id do Produto',
+        OrderDetailID AS 'Detalhe do pedido',
+        OrderID AS 'Id do pedido'
+FROM OrderDetails
+WHERE OrderID % 2 = 0
+AND ProductID  >5
+AND ProductID  <15
+Order BY Quantity
+
+#### Exercício 4
+SELECT Quantity AS ' Quantidade',
+		ProductID AS 'Id do Produto',
+        OrderDetailID AS 'Detalhe do pedido',
+        OrderID AS 'Id do pedido'
+FROM OrderDetails
+WHERE OrderDetailID >50
+AND ProductID Like'%0'
+Order BY OrderID
+
+#### Exercício 5
+SELECT Quantity AS ' Quantidade',
+		ProductID AS 'Id do Produto',
+        OrderDetailID AS 'Detalhe do pedido',
+        OrderID AS 'Id do pedido'
+FROM OrderDetails
+WHERE Quantity <12
+AND OrderID >100
+AND OrderID <200
+Order BY ProductID
+
+#### Exercício 6
+SELECT Quantity AS ' Quantidade',
+		ProductID AS 'Id do Produto',
+        OrderDetailID AS 'Detalhe do pedido',
+        OrderID AS 'Id do pedido'
+FROM OrderDetails
+WHERE Quantity <12
+AND OrderID = 300
+AND Quantity > 10
+AND Quantity > 20
+Order BY OrderDetailID
+
+#### Exercício 7 
+SELECT Quantity AS ' Quantidade',
+		ProductID AS 'Id do Produto',
+        OrderDetailID AS 'Detalhe do pedido',
+        OrderID AS 'Id do pedido'
+FROM OrderDetails
+WHERE ProductID >20 
+AND Quantity %2 <> 0
+Order BY OrderID
+
+#### Exercício 8
+SELECT Quantity AS ' Quantidade',
+		ProductID AS 'Id do Produto',
+        OrderDetailID AS 'Detalhe do pedido',
+        OrderID AS 'Id do pedido'
+FROM OrderDetails
+WHERE OrderDetailID %5=0
+AND ProductID <10 
+Order BY Quantity
+
+#### Exercício 9 
+SELECT Quantity AS ' Quantidade',
+		ProductID AS 'Id do Produto',
+        OrderDetailID AS 'Detalhe do pedido',
+        OrderID AS 'Id do pedido'
+FROM OrderDetails
+WHERE Quantity >18
+AND OrderID LIKE '%3'
+Order BY ProductID
+
+#### Exercício 10
+SELECT Quantity AS ' Quantidade',
+		ProductID AS 'Id do Produto',
+        OrderDetailID AS 'Detalhe do pedido',
+        OrderID AS 'Id do pedido'
+FROM OrderDetails
+WHERE ProductID %4 =0
+AND OrderDetailID <200
+Order BY Quantity
+
+#### Exercício 11
+SELECT Quantity AS ' Quantidade',
+		ProductID AS 'Id do Produto',
+        OrderDetailID AS 'Detalhe do pedido',
+        OrderID AS 'Id do pedido'
+FROM OrderDetails
+WHERE OrderID %3=0
+AND Quantity >10
+Order BY OrderDetailID
+
+#### Exercício 12
+SELECT Quantity AS ' Quantidade',
+		ProductID AS 'Id do Produto',
+        OrderDetailID AS 'Detalhe do pedido',
+        OrderID AS 'Id do pedido'
+FROM OrderDetails
+WHERE OrderDetailID LIKE'%6'
+AND Quantity between 20 and 40
+Order BY ProductID
+
+#### Exercício 13 
+SELECT Quantity AS ' Quantidade',
+		ProductID AS 'Id do Produto',
+        OrderDetailID AS 'Detalhe do pedido',
+        OrderID AS 'Id do pedido'
+FROM OrderDetails
+WHERE ProductID <30
+AND OrderID >100 
+Order BY Quantity
+
+#### Exercício 14 
+SELECT Quantity AS ' Quantidade',
+		ProductID AS 'Id do Produto',
+        OrderDetailID AS 'Detalhe do pedido',
+        OrderID AS 'Id do pedido'
+FROM OrderDetails
+WHERE Quantity %7=0
+AND OrderDetailID <300 
+Order BY ProductID
+
+#### Exercício 15
+SELECT Quantity AS ' Quantidade',
+		ProductID AS 'Id do Produto',
+        OrderDetailID AS 'Detalhe do pedido',
+        OrderID AS 'Id do pedido'
+FROM OrderDetails
+WHERE OrderID between 150 and 300
+AND Quantity > 25
+Order BY OrderDetailID
+
+#### Exercício 16
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE Quantity < 20 
+AND ProductID LIKE '%5'
+ORDER BY OrderID
+
+#### Exercício 17
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE OrderID >500
+AND ProductID %3 = 0
+ORDER BY Quantity
+
+#### Exercício 18
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE OrderDetailID BETWEEN 100 AND 200
+AND Quantity < 15 
+ORDER BY ProductID
+
+#### Exercício 19 
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE ProductID > 10 
+AND OrderID  < 50 
+ORDER BY Quantity
+
+#### Exercício 20 
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE OrderDetailID < 10
+AND Quantity  %2 = 0
+ORDER BY OrderID
+
+#### Exercício 21 
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE OrderID BETWEEN 300 AND 400 
+AND ProductID <20 
+ORDER BY Quantity 
+
+#### Exercício 22 
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE Quantity > 30 
+AND OrderDetailID LIKE '%8' 
+ORDER BY OrderID 
+
+#### Exercício 23 
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE OrderID %6 = 0
+AND Quantity BETWEEN 15 AND 35 
+ORDER BY ProductID 
+
+#### Exercício 24 
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE ProductID > 25 
+AND OrderDetailID %3 = 0 
+ORDER BY Quantity  
+
+#### Exercício 25 
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE OrderDetailID > 400 
+AND OrderID %5 = 0 
+ORDER BY Quantity  
+
+#### Exercício 26 
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE Quantity < 10 
+AND OrderID >  50  
+ORDER BY ProductID 
+
+#### Exercício 27
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE ProductID BETWEEN 5 AND 20 
+AND OrderID LIKE '%7'
+ORDER BY OrderDetailID  
+
+#### Exercício 28 
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE OrderID < 200 
+AND Quantity > 25 
+ORDER BY ProductID  
+
+#### Exercício 29 
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE ProductID %9 = 0
+AND Quantity BETWEEN 10  AND 20 
+ORDER BY OrderID  
+
+#### Exercício 30 
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE Quantity > 50 
+AND ProductID < 30 
+ORDER BY OrderDetailID
+
+#### Exercício 31
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE OrderDetailID %4 =0 
+AND OrderID <300  
+ORDER BY Quantity
+
+#### Exercício 32
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE Quantity <5
+AND OrderID BETWEEN 100 AND 1000
+ORDER BY ProductID
+
+#### Exercício 33
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE ProductID >15
+AND OrderID LIKE '%2'
+ORDER BY Quantity
+
+#### Exercício 34
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE Quantity <12
+AND OrderDetailID >150
+ORDER BY OrderID
+
+#### Exercício 35
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE ProductID BETWEEN 20 AND 40
+AND Quantity %3 = 0
+ORDER BY Quantity
+
+#### Exercício 36
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE OrderID >700
+AND Quantity >40 
+ORDER BY ProductID
+
+#### Exercício 37
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE ProductID %8=0
+AND OrderID <400 
+ORDER BY Quantity
+
+#### Exercício 38
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE Quantity >15
+AND OrderDetailID LIKE '%4' 
+ORDER BY OrderID
+
+#### Exercício 39 
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE OrderID <100
+AND ProductID BETWEEN 10 AND 20
+ORDER BY OrderDetailID
+
+#### Exercício 40
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE Quantity <30
+AND ProductID %5=0
+ORDER BY OrderID
+
+#### Exercício 41
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE Quantity <20
+AND ProductID LIKE '%9'
+ORDER BY OrderDetailID
+
+#### Exercício 42
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE OrderID %5=0
+AND ProductID BETWEEN 15 AND 30
+ORDER BY Quantity
+
+#### Exercício 43
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE OrderDetailID %7=0
+AND Quantity BETWEEN 25 AND 50
+ORDER BY OrderID
+
+#### Exercício 44
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE OrderID <250
+AND Quantity %6=0
+ORDER BY ProductID
+
+#### Exercício 45 
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE OrderDetailID BETWEEN 50 AND 150
+AND ProductID >20
+ORDER BY Quantity
+
+#### Exercício 46 
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE OrderID =350
+AND Quantity >30
+ORDER BY ProductID
+
+#### Exercício 47
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE OrderDetailID %2=0
+AND ProductID LIKE '%0'
+ORDER BY OrderID
+
+#### Exercício 48
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE Quantity BETWEEN 10 AND 25
+AND ProductID <50
+ORDER BY Quantity
+
+#### Exercício 49
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE OrderID LIKE '%1'
+AND Quantity %5=0
+ORDER BY OrderDetailID
+
+#### Exercício 50 
+SELECT OrderDetailID AS 'Detalhe do pedido',
+OrderID AS 'ID do pedido',
+ProductID AS 'ID do produto', 
+Quantity AS 'Quantidade'
+FROM OrderDetails
+WHERE OrderDetailID >300
+AND Quantity <12
+ORDER BY OrderID
