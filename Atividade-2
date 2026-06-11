@@ -1,0 +1,603 @@
+ATV-SQL
+
+#### EX1
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE CustomerName LIKE 'f%' 
+ORDER BY CustomerName ASC
+
+#### EX2
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE City LIKE 'g%' 
+ORDER BY City ASC, CustomerName DESC;
+
+#### Ex3
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE Country LIKE 'France' 
+ORDER BY PostalCode 
+
+#### Ex4
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE Country LIKE 'B%'  
+   OR City LIKE '%rio%'  
+ORDER BY Country ASC, City ASC;
+
+#### Ex5
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE City LIKE '%Berlin%'  
+ORDER BY CustomerName
+
+#### Ex6
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE Country LIKE '%USA%'  
+ORDER BY City ASC
+
+#### Ex7
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE ContactName LIKE 'A%'
+ORDER BY ContactName ASC
+
+#### EX8
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE Country NOT LIKE '%Canada%'
+ORDER BY PostalCode
+
+#### Ex9
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE CustomerName LIKE '%Shop%'
+ORDER BY Country
+
+#### Ex10
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE Country LIKE '%Mexico%'
+ORDER BY CustomerID DESC
+
+#### Ex11
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE PostalCode LIKE '1%'
+ORDER BY CustomerName
+
+#### Ex12
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE City LIKE '%Madrid%'
+ORDER BY ContactName ASC
+
+#### Ex13
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE City LIKE 'P%'
+ORDER BY Country,CustomerID
+
+#### Ex14
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE City LIKE '%New York%'
+ORDER BY CustomerName
+
+#### Ex15
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE Country LIKE '%a'
+ORDER BY City ASC
+
+#### Ex16
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE PostalCode LIKE '5%'
+ORDER BY ContactName DESC
+
+#### Ex17
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE CustomerName LIKE 'D%'
+ORDER BY PostalCode DESC
+
+#### Ex18
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE CustomerName LIKE '%lTD%'
+ORDER BY Country,City
+
+#### Ex19
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE Country LIKE '%Germany%'
+ORDER BY CustomerName
+
+#### Ex20
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE ContactName LIKE '%SON%'
+ORDER BY PostalCode
+
+#### Ex21
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE City LIKE '%Tokyo%'
+ORDER BY CustomerName DESC
+
+#### Ex22
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE PostalCode LIKE '%00%'
+ORDER BY CustomerID
+
+#### Ex23
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE City like '%Paris%'
+ORDER BY Country ASC
+
+#### Ex24
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE City like 'S%'
+ORDER BY CustomerName
+
+#### Ex25
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE ContactName like 'j%'
+ORDER BY Country,PostalCode
+
+#### Ex26
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE City LIKE '%London%'
+ORDER BY CustomerID
+
+#### Ex27
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE CustomerName LIKE '%'
+ORDER BY ContactName ASC
+
+#### Ex28
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE Country LIKE '%Canada%'
+ORDER BY PostalCode,CustomerName
+
+#### Ex29
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE CustomerName LIKE '%Global%'
+ORDER BY Country
+
+#### Ex30
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE Country LIKE 'I%'
+ORDER BY City
+
+#### Ex31
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE CustomerName LIKE 'T%'
+ORDER BY ContactName Desc
+
+#### Ex32
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE City LIKE '%Chicago%'
+ORDER BY PostalCode
+
+#### Ex33
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE Country LIKE '%Italy%'
+ORDER BY CustomerName,ContactName
+
+#### Ex34
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE CustomerName LIKE 'B%'
+ORDER BY CustomerID ASC
+
+#### Ex35
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE City LIKE '%o'
+ORDER BY Country
+
+#### Ex36
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE Country LIKE '%Brazil%'
+ORDER BY PostalCode,CustomerName
+
+#### Ex37
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE PostalCode LIKE '9%'
+ORDER BY CustomerName DESC
+
+#### Ex38
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE CustomerName LIKE '%Services%'
+ORDER BY ContactName
+
+#### Ex39
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE Country LIKE '%SPAIN%'
+ORDER BY City
+
+#### Ex40
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE City LIKE 'A%'
+ORDER BY Country,CustomerName
+
+#### Ex41
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE CustomerName LIKE 'E%'
+ORDER BY PostalCode 
+
+####Ex42
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE CustomerName LIKE '%Group%'
+ORDER BY Country ASC
+
+####Ex43
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE Country LIKE 'N%'
+ORDER BY CustomerName DESC
+
+####Ex44
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE City LIKE 'L%'
+ORDER BY CustomerID 
+
+####Ex45
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE Country LIKE 'L%'
+ORDER BY PostalCode DESC
+
+####Ex46
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE PostalCode LIKE '5%'
+ORDER BY CustomerName, City
+
+####Ex47
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE CustomerName LIKE 'Germany%'
+ORDER BY City
+
+####Ex48
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE CustomerName LIKE 'C%'
+ORDER BY Country,ContactName
+
+####Ex49
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE ContactName LIKE '%King%'
+ORDER BY CustomerID
+
+####Ex50
+SELECT CustomerName AS 'Nome personalizado',
+CustomerID AS 'ID personalizado',
+ContactName AS 'Contado do Nome',
+Address AS 'Endereco',
+City AS 'Cidade',
+PostalCode AS 'Codigo postal',
+Country AS 'Pais'
+FROM Customers
+WHERE PostalCode LIKE '3%'
+ORDER BY CustomerName,Country
+	
