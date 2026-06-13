@@ -1,0 +1,349 @@
+####EX1
+SELECT CONCAT (ProductName,'  ',Price) AS 'Nome e preco',
+Price, Price*2 AS 'Dobro preco'
+FROM Products 
+LIMIT 10;
+
+####EX2
+SELECT 
+    ProductName AS 'Nome do produto',
+    Price AS 'Valor do produto',
+    CONCAT('O produto ', ProductName, ' custa ', Price, ' euros') AS 'Nome e Valor '
+FROM Products
+ORDER BY Price ASC
+LIMIT 5;
+
+####EX3
+SELECT OrderDetailID AS 'Detalhe do pedido',Quantity AS 'Quantidade',
+(Quantity * 10) AS 'ValorTotal',
+CONCAT('A encomenda ', OrderDetailID, 
+           ' tem valor total de ', (Quantity * 10), ' euros') AS 'Nome e Valor' 
+FROM OrderDetails
+ORDER BY OrderDetailID
+LIMIT 15;
+
+####EX4
+SELECT EmployeeID AS 'Funcionario',FirstName AS 'Primeiro nome',LastName AS 'Segundo nome',
+CONCAT(FirstName, ' ', LastName, ' - Funcionario Senai') AS 'Nome Completo'
+FROM Employees
+ORDER BY EmployeeID ASC
+LIMIT 3;
+
+####EX5
+SELECT ProductName AS 'Nome do produto',Price AS 'Preco',(Price * 0.85) AS 'Preco Com Desconto',
+CONCAT('O produto ', ProductName, 
+           ' custa ', Price, ' euros. ',
+           'Com desconto de 15%: ', (Price * 0.85), ' euros') AS Descricao
+FROM Products
+ORDER BY Price 
+LIMIT 8;
+
+####EX6
+SELECT CustomerName AS 'Nome do Cliente' ,City 'Cidade',
+CONCAT(CustomerName, ' - ', City) AS 'Cliente Cidade'
+FROM Customers
+ORDER BY CustomerName
+LIMIT 12
+
+####EX7
+SELECT  OrderDetailID AS 'Detalhe do pedido',Quantity AS 'Quantidade',(100 - Quantity) AS 'Diferenca do stock',
+CONCAT('A encomenda ', OrderDetailID, 
+           ' possui ', Quantity, ' unidades. ',
+           'Faltam ', (100 - Quantity), ' para atingir o stock ideal.') AS 'Descricao'
+FROM OrderDetails
+ORDER BY OrderDetailID
+LIMIT 20;
+
+####EX8
+SELECT CategoryName AS 'Nome da categoria', Description AS 'Descricao',
+CONCAT(CategoryName, ' - ', Description) AS 'Categoria descricao'
+FROM Categories
+ORDER BY CategoryName
+LIMIT 5;
+
+####EX9
+SELECT SupplierName AS 'Nome do fornecedor',ProductName AS 'Nome do produto',Price 'preco',(Price * 50) AS 'Custo 50 Unidades',
+CONCAT('Fornecedor ', SupplierName, 
+' vende o produto ', ProductName, 
+' e 50 unidades custariam ', (Price * 50), ' euros') AS Detalhes
+FROM Suppliers s
+JOIN Products p ON s.SupplierID = p.SupplierID
+ORDER BY s.SupplierName ASC
+LIMIT 10;
+
+####EX10
+SELECT CustomerName AS 'Nome do cliente',Address AS 'Endereco',City AS 'cidade',PostalCode AS 'Codigo postal',
+CONCAT(Address, ' - ', City, ' - ', PostalCode) AS 'Morada Completa',
+(LENGTH(Address) + LENGTH(City) + LENGTH(PostalCode)) AS 'TamanhoMorada'
+FROM Customers
+ORDER BY CustomerName ASC
+LIMIT 25;
+ 
+####EX11
+SELECT City AS 'Cidade',
+COUNT(CustomerID) AS 'Numero de Clientes'
+FROM Customers
+GROUP BY City
+ORDER BY 'Numero de Clientes' DESC 
+LIMIT 5;
+
+####EX12 
+SELECT CategoryID AS 'categoria do produto',
+COUNT(ProductID) AS 'Numero de Produtos'
+FROM Products
+GROUP BY CategoryID
+ORDER BY 'Numero de Produtos' 
+LIMIT 3;
+
+####13
+SELECT EmployeeID AS 'funcionario',
+COUNT(OrderID) AS 'Numero de Encomendas'
+FROM Orders
+GROUP BY EmployeeID
+ORDER BY 'Numero de Encomendas'
+LIMIT 5;
+
+####EX14 
+SELECT Country AS 'Pais',
+COUNT(SupplierID) AS 'Numero de Fornecedores'
+FROM Suppliers
+GROUP BY Country
+ORDER BY 'Numero de Fornecedores' DESC
+LIMIT 10;
+
+####EX15
+SELECT OrderID AS 'Pedido',
+COUNT(DISTINCT ProductID) AS 'Numero de Produtos de Diferentes'
+FROM OrderDetails
+GROUP BY OrderID
+ORDER BY 'Numero de Produtos de Diferentes' 
+LIMIT 15;
+
+####EX16
+SELECT ShipperName AS 'Nome do remetente',
+COUNT(ShipperID) AS 'Numero de Transportadoras'
+FROM Shippers
+GROUP BY ShipperName
+ORDER BY 'Numero de Transportadoras'
+LIMIT 2;
+
+####EX17
+SELECT SupplierID AS ' ID do forncedor ',
+COUNT(ProductID) AS 'Total de Produtos'
+FROM Products
+GROUP BY SupplierID
+ORDER BY 'Total de Produtos'
+LIMIT 5;
+
+####EX18
+SELECT OrderDate AS 'data do pedido',
+COUNT(OrderID) AS 'Numero de Encomendas'
+FROM Orders
+GROUP BY OrderDate
+ORDER BY 'Numero de Encomendas'
+LIMIT 10;
+
+####EX19
+SELECT PostalCode AS 'Codigo postal',
+COUNT(CustomerID) AS 'Numero de Clientes'
+FROM Customers
+GROUP BY PostalCode
+ORDER BY 'Numero de Clientes'
+LIMIT 8;
+
+####EX20
+SELECT CategoryID AS 'Categoria',
+CONCAT('A categoria ', CategoryID, ' possui ', COUNT(ProductID), ' produtos') AS Detalhes
+FROM Products
+GROUP BY CategoryID;
+
+####EX21 
+SELECT Country AS 'Pais',
+COUNT(CustomerID) AS 'Numero de Clientes'
+FROM Customers
+GROUP BY Country
+HAVING COUNT(CustomerID) > 5
+ORDER BY 'Numero de Clientes'
+
+####EX22
+SELECT EmployeeID 'ID do funcionario',
+COUNT(OrderID) AS 'Numero de Encomendas'
+FROM Orders
+GROUP BY EmployeeID
+HAVING COUNT(OrderID) > 10
+ORDER BY 'Numero de Encomendas'
+
+####EX23
+SELECT CategoryID AS 'Categoria',
+COUNT(ProductID) AS 'Numero de Produtos'
+FROM Products
+GROUP BY CategoryID
+HAVING COUNT(ProductID) > 12
+ORDER BY 'Numero de Produtos'
+
+####EX24
+SELECT City,
+COUNT(SupplierID) AS 'Numero de Fornecedores'
+FROM Suppliers
+GROUP BY City
+ORDER BY 'Numero de Fornecedores' DESC;
+
+####EX25
+SELECT OrderID,
+COUNT(DISTINCT ProductID) AS NumeroProdutosDistintos
+FROM OrderDetails
+GROUP BY OrderID
+HAVING COUNT(DISTINCT ProductID) > 3
+ORDER BY NumeroProdutosDistintos DESC;
+
+####EX26
+SELECT City, COUNT(CustomerID) AS TotalClientes
+FROM Customers
+GROUP BY City
+HAVING COUNT(CustomerID) > 3;
+
+####EX27
+SELECT SupplierID, COUNT(ProductID) AS TotalProdutos
+FROM Products
+GROUP BY SupplierID
+HAVING COUNT(ProductID) < 5;
+
+####EX28
+SELECT COUNT(*) AS QtdeCategorias, TotalProdutos
+FROM (
+    SELECT CategoryID, COUNT(ProductID) AS TotalProdutos
+    FROM Products
+    GROUP BY CategoryID
+) AS Contagem
+GROUP BY TotalProdutos
+HAVING COUNT(*) > 1;
+
+####EX29
+SELECT YEAR(BirthDate) AS AnoNascimento, COUNT(EmployeeID) AS TotalFuncionarios
+FROM Employees
+GROUP BY YEAR(BirthDate)
+HAVING COUNT(EmployeeID) > 1;
+
+####EX30
+SELECT C.Country, COUNT(DISTINCT O.ShipperID) AS TotalShippers
+FROM Orders O
+JOIN Customers C ON O.CustomerID = C.CustomerID
+GROUP BY C.Country
+HAVING COUNT(DISTINCT O.ShipperID) > 1;
+
+####EX31
+SELECT *
+FROM Customers
+ORDER BY CustomerID
+LIMIT 10;
+
+####EX32
+SELECT *
+FROM Products
+WHERE Price > 50;
+
+####EX33
+SELECT * FROM Categories;
+
+####EX34
+SELECT LastName, FirstName
+FROM Employees;
+
+####EX35
+SELECT *
+FROM Orders
+ORDER BY OrderDate DESC
+LIMIT 20;
+
+####EX36
+SELECT *
+FROM Suppliers
+WHERE City = 'London';
+
+####EX37
+SELECT ShipperName, Phone
+FROM Shippers;
+
+####EX38
+SELECT *
+FROM OrderDetails
+WHERE Quantity > 50;
+
+####EX39
+SELECT CustomerName, ContactName
+FROM Customers;
+
+####EX40
+SELECT *
+FROM Products
+WHERE Price = 0 OR Price IS NULL;
+
+####EX41
+SELECT CONCAT('Categoria No ', CategoryID) AS Categoria,
+COUNT(ProductID) AS TotalProdutos
+FROM Products
+GROUP BY CategoryID
+HAVING COUNT(ProductID) > 5
+LIMIT 3;
+
+####EX42
+SELECT OrderID, SUM(Quantity) AS TotalItens
+FROM OrderDetails
+GROUP BY OrderID;
+
+####EX43
+SELECT CONCAT(FirstName, ' ', LastName) AS NomeCompleto, BirthDate
+FROM Employees
+ORDER BY BirthDate ASC
+LIMIT 5;
+
+####EX44
+SELECT City, COUNT(CustomerID) AS TotalClientes
+FROM Customers
+GROUP BY City
+HAVING COUNT(CustomerID) > 2
+LIMIT 5;
+
+####EX45
+SELECT 
+CONCAT('Produto: ', ProductName, ' IVA: ', Price * 0.23) AS InfoProduto
+FROM Products
+LIMIT 15;
+
+####EX46
+SELECT ProductID, AVG(Quantity) AS MediaQuantidade
+FROM OrderDetails
+GROUP BY ProductID
+HAVING AVG(Quantity) > 20;
+
+####EX47
+CREATE TABLE ContactosFornecedores AS
+SELECT 
+CONCAT(SupplierName, ' - ', ContactName) AS InfoFornecedor
+FROM Suppliers
+LIMIT 10;
+
+####EX48
+SELECT EmployeeID, COUNT(OrderID) AS TotalEncomendas
+FROM Orders
+GROUP BY EmployeeID
+HAVING COUNT(OrderID) * 2 > 50;
+
+####EX49
+SELECT TOP 2
+ShipperID, COUNT(OrderID) AS TotalEncomendas
+INTO ResumoTransportes
+FROM Orders
+GROUP BY ShipperID
+ORDER BY TotalEncomendas DESC;
+
+####EX50
+SELECT TOP 3
+CONCAT(e.FirstName, ' ', e.LastName) AS NomeCompleto,
+COUNT(o.OrderID) AS TotalEncomendas
+INTO RelatorioFinal
+FROM Employees e
+JOIN Orders o ON e.EmployeeID = o.EmployeeID
+GROUP BY e.EmployeeID, e.FirstName, e.LastName
+HAVING COUNT(o.OrderID) > 5
+ORDER BY TotalEncomendas DESC;
